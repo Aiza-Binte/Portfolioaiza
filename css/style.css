@@ -1,0 +1,150 @@
+:root {
+    --main-bg: #2a0001;
+    --accent: #ff4f5a;
+    --text-light: #fff0f0;
+    --text-muted: #d9a5a5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: var(--main-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent)
+}
+
+#hero {
+    text-align: center;
+    padding: 8rem 2rem;
+    background: linear-gradient(to bottom right, #3b0003, #1a0001);
+}
+
+#hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--main-bg);
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #400008;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: #59000c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+li {
+    background: #400008;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+}
+
+li:hover {
+    background: var(--accent);
+    color: var(--main-bg);
+    box-shadow: 0 0 15px var(--accent);
+    transform: translateY(-3px);
+    transition: 0,3s ease;
+}
+
+.scroll-top {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-top.show {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a0001;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
