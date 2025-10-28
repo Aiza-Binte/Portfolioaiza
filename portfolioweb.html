@@ -6,8 +6,8 @@
     <title>Aiza | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+
+<body id="top">
     <header>
         <h1 class="logo">AB</h1>
         <nav>
@@ -16,12 +16,25 @@
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="language-toggle">
+            <button id="btnEn">EN</button>
+            <button id="btnNl">NL</button>
+        </div>
     </header> 
 
     <section id="hero">
-        <h2>Hello, I'm <span class="highlight">Aiza</span></h2>
-        <p>I create my work using HTML & CSS.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <h2>
+           <span class="en">Hello, I'm <span class="highlight">Aiza</span></span>
+           <span class="nl">Hallo, Ik ben <span class="highlight">Aiza</span></span>
+        </h2>
+        <p>
+           <span class="en">From class 25DEVA.</span>
+           <span class="nl">Van klas 25DEVA.</span>
+        </p>
+        <a href="#projects" class="btn">
+            <span class="en">View My Work</span>
+            <span class="nl">Bekijk Mijn Werk</span>
+        </a>
     </section>
 
     <section id="about">
@@ -39,8 +52,8 @@
                 <p>A simple responsive website built using HTML & CSS.</p>
             </div>
             <div class="projects-card">
-                <h3></h3>
-                <p></p>
+                <h3>My Projects</h3>
+                <p>Other school projects.</p>
             </div>
         </div>
     </section>
@@ -58,27 +71,38 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>Let's work together!</p>
-        <form>
-            <input type="text" id="naam">
-        </form>
         <p>Email: <a href="mailto:517568@student.firda.nl">517568@student.firda.nl</a></p>
     </section>
 
-<body id="top">
-    <a href="#top" class="scroll-top" id="scrollTopBtn">↑</a>
+    <a href="#top" class="scroll-top" id="scrollTopBtn">&#8679;</a>
 
-<section id="hero">
-    <h2>
-        <span class="en">Hello, I'm <span class="highlight">Aiza</span></span>
-        <span class="nl">Hallo, Ik ben <span class="highlight">Aiza</span></span>
-    </h2>
-    <p>
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
 
-    </p>
-    <a href="#projects" class="btn">
-        <span class="en"></span>
-    </a>
-</section>
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollBtn.classList.add("show");
+          } else {
+            scrollBtn.classList.remove("show");
+          }
+        });
+    </script>
+
+    <script>
+        const btnEn= document.getElementById("btnEn");
+        const btnNl= document.getElementById("btnNl");
+
+        btnEn.addEventListener ("click", () => {
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'inline');
+            document.querySelectorAll('.nl').forEach(el => el.style.display = 'none');           
+        });
+
+        btnNl.addEventListener ("click", () => {
+            document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.nl').forEach(el => el.style.display = 'inline');           
+        });
+    </script>
+    
     <footer>
         <p>© 2025 Aiza | Built with using HTML & CSS</p>
     </footer>

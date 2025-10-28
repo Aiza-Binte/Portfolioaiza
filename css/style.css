@@ -129,18 +129,58 @@ li:hover {
 }
 
 .scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background: #b3001b;
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 999;
 }
 
 .scroll-top.show {
-    opacity: 0.8;
+    opacity: 0.9;
     pointer-events: auto;
+}
+
+.scroll-top:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    background: #ff4c4c;
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+.en { display: inline;}
+.nl { display: none;}
+
+.language-toggle button {
+    background: #b3001b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.language-toggle button:hover {
+    background: #ff4c4c;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
