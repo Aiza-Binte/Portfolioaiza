@@ -143,14 +143,48 @@ h2 {
 .project-card {
     background: var(--card-bg);
     padding: 2rem;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(123, 97, 255, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(123, 97, 255, 0.2);
+}
+
+.project-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin: 0.2rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.project-links a:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 ul {
