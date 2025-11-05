@@ -17,8 +17,8 @@
             <a href="#contact">Contact</a>
         </nav>
         <div class="language-toggle">
-            <button id="btnEn">EN</button>
-            <button id="btnNl">NL</button>
+            <button class="nl" id="btnEn">EN</button>
+            <button class="en" id="btnNl">NL</button>
         </div>
     </header> 
 
@@ -39,9 +39,14 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            I'm a student studying software development.
-        </p>
+        <div class="about-container">
+            <img src="" alt="Photo" class="about-img">
+            <div class="about-text">
+                <p>
+                    I'm a student studying software development.
+                </p>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
@@ -102,6 +107,8 @@
             document.querySelectorAll('.nl').forEach(el => el.style.display = 'inline');           
         });
     </script>
+
+
     
     <footer>
         <p>© 2025 Aiza | Built with using HTML & CSS</p>
